@@ -1,5 +1,5 @@
 var Nav = () => (
-  <nav className="navbar">
+  <nav className="navbar">asdfasdfasdf
     <div className="col-md-6 col-md-offset-3">
       <Search />
     </div>

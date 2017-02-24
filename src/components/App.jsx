@@ -1,17 +1,25 @@
+//props={array of video objects}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {currentVideo: exampleVideoData[0]};
+
   }
+  playVideoListEntry(video) {
+
+    this.setState({currentVideo: video});
+  }
+
   render() {
     return (
       <div>
         <Nav />
         <div className="col-md-7">
-          <VideoPlayer video ={exampleVideoData[0]}/>
+          <VideoPlayer video={this.state.currentVideo}/>
         </div>
         <div className="col-md-5">
-          <VideoList videos ={exampleVideoData}/>
+          <VideoList videos={exampleVideoData} fxn={this.playVideoListEntry.bind(this)}/>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-//props = {video: {video object}}
+//props = {video: {videoObj}}
 
 var VideoPlayer = (props) => (
   <div className="video-player">
